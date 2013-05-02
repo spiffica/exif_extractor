@@ -18,7 +18,6 @@ class ExifExtractor
 
   def latitude
     lat = exifr.gps_latitude.to_f 
-    lat == 0? nil : lat
     unless lat == 0
       lat_ref == "S"? -lat : lat
     else
@@ -32,7 +31,6 @@ class ExifExtractor
 
   def longitude
     lon = exifr.gps_longitude.to_f 
-    lon == 0? nil : lon
     unless lon == 0
       lon_ref == "W"? -lon : lon
     else
